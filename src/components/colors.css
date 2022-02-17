@@ -1,0 +1,16 @@
+.colors-container {
+  display: flex;
+}
+
+.colors-container div {
+  margin-left: 10px;
+}
+
+.color {
+  width: 200px;
+  height: 100px;
+}
+
+.color-rating {
+  margin-top: 10px;
+}

@@ -1,11 +1,11 @@
 import './App.css';
-import Star from './components/Star';
+import Colors from './components/Colors';
 
 
 function App() {
   return (
     <div className="App">
-      <Star />
+      <Colors />
     </div>
   );
 }

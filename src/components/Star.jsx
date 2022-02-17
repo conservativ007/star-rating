@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaStar } from "react-icons/fa"; 
 
-const Star = () => {
+const Star = ({ selected = false }) => {
   return (
-    <FaStar />
+    <FaStar color={selected ? "grey" : "red"} />
   );
 }
 

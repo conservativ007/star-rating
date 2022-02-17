@@ -1,0 +1,20 @@
+[
+  {
+    "id" : "123123123",
+    "title" : "peter river",
+    "color": "#3498db",
+    "rating" : "3"
+  },
+  {
+    "id" : "12341235",
+    "title" : "alizarin",
+    "color": "#e74c3c",
+    "rating" : "1"
+  },
+  {
+    "id" : "123007432",
+    "title" : "emerald",
+    "color": "#2ecc71",
+    "rating" : "2"
+  }
+]
