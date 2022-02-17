@@ -1,18 +1,22 @@
 import React from 'react';
-import dataColors from "../data/colors.json";
+
 import  "./colors.css";
 import Starrating from './StarRating';
+import { useColors } from "../hooks/ColorProvider";  
 
 
 const Colors = () => {
+
+  const { colors } = useColors();
+
   return (
     <div className='colors-container'>
       {
-        dataColors.map(color => 
+        colors.map(color => 
           <div key={color.id}>
             <h1>{color.title}</h1>
             <div className='color' style={{backgroundColor: color.color}}></div>
-            <Starrating selected={color.rating} />
+            <Starrating id={color.id} selected={color.rating} />
           </div>
         )
       }
