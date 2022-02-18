@@ -1,5 +1,6 @@
 .colors-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .colors-container div {

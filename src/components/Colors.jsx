@@ -1,5 +1,5 @@
 import React from 'react';
-import  "./colors.css";
+import  "../styles/colors.css";
 import Starrating from './StarRating';
 import { useColors } from "../hooks/ColorProvider";
 

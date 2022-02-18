@@ -1,0 +1,10 @@
+.color-form {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: start;
+}
+
+input {
+  margin-right: 5px;
+}
