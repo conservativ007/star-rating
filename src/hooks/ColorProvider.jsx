@@ -1,22 +1,29 @@
-import React, { createContext, useContext, useState } from 'react';
-import colorData from "../data/colors.json";
+import React, { useState, createContext, useContext } from 'react';
+import dataColors from "../data/colors.json";
 
-const colorContext = createContext();
-export const useColors = () => useContext(colorContext);
+const ColorContext = createContext();
+export const useColors = () => useContext(ColorContext);
 
 const Colorprovider = ({ children }) => {
-  const [colors, setColors] = useState(colorData);
 
-  function changeRating (id, rating) {
+  const [colors, setColors] = useState(dataColors);
+
+  function changeRating(id, rating) {
     setColors(
-      colors.map(color => color.id === id ? { ...color, rating } : { ...color })
+      colors.map(color => color.id === id ? {...color, rating} : {...color})
+    )
+  }
+
+  function deleteColor(id) {
+    setColors(
+      colors.filter(color => color.id !== id)
     )
   }
 
   return (
-    <colorContext.Provider value={{colors, changeRating}} >
+    <ColorContext.Provider value={{colors, changeRating, deleteColor}}>
       {children}
-    </colorContext.Provider>
+    </ColorContext.Provider>
   );
 }
 

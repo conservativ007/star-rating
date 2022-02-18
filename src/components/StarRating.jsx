@@ -1,12 +1,10 @@
 import React from 'react';
 import Star from './Star';
-
-import { useColors } from '../hooks/ColorProvider';
+import {useColors} from "../hooks/ColorProvider";
 
 const Starrating = ({ stars = 5, id, selected }) => {
 
-  const { changeRating } = useColors();
-
+  const  {changeRating}  = useColors();
 
   return ( 
     <div className='color-rating'>

@@ -1,13 +1,13 @@
 import React from 'react';
-
 import  "./colors.css";
 import Starrating from './StarRating';
-import { useColors } from "../hooks/ColorProvider";  
+import { useColors } from "../hooks/ColorProvider";
 
+import { FaTrash } from 'react-icons/fa';
 
 const Colors = () => {
 
-  const { colors } = useColors();
+  const { colors, deleteColor } = useColors();
 
   return (
     <div className='colors-container'>
@@ -15,7 +15,9 @@ const Colors = () => {
         colors.map(color => 
           <div key={color.id}>
             <h1>{color.title}</h1>
-            <div className='color' style={{backgroundColor: color.color}}></div>
+            <div className='color-background' style={{backgroundColor: color.color}}>
+              <FaTrash className='color-trash' onClick={() => deleteColor(color.id)} />
+            </div>
             <Starrating id={color.id} selected={color.rating} />
           </div>
         )

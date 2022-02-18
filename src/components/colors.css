@@ -6,9 +6,17 @@
   margin-left: 10px;
 }
 
-.color {
+.color-background {
+  position: relative;
   width: 200px;
   height: 100px;
+}
+
+.color-trash {
+  position: absolute;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
 }
 
 .color-rating {
